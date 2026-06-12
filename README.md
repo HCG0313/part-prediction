@@ -56,7 +56,9 @@ flowchart LR
 | [특성공학과 전처리](docs/feature-engineering.md) | FOMO 점수, 시장 국면, 결측치/이상치 처리 |
 | [문제 해결 기록](docs/troubleshooting.md) | 수집 오류, 휴장일 중복 학습, 환율/차트 문제 해결 |
 | [검증 결과](docs/results.md) | 일별 예측 결과와 모델이 학습한 점 |
+| [일기 운영 가이드](docs/daily-prediction-diary.md) | 매일 장마감 후 어떤 형식으로 기록할지 정리 |
 | [일별 기록](docs/diary/README.md) | 날짜별 장마감 예측 일기 인덱스 |
+| [포트폴리오 점검표](docs/portfolio-checklist.md) | GitHub 포트폴리오 관점의 자체 점검표 |
 
 ## 모델이 보는 주요 신호
 
@@ -121,3 +123,10 @@ flowchart LR
 3. 장중 반등 신호 모델의 precision/recall을 정확도보다 우선해서 개선한다.
 4. KRX 공식 데이터 지연과 KIS 실시간 데이터의 역할을 명확히 분리한다.
 5. GitHub 일기는 매일 "예측, 실제 결과, 오차 원인, 모델이 배운 점" 형식으로 유지한다.
+
+## 문서 운영 규칙
+
+- README는 포트폴리오 첫 화면이므로 프로젝트 요약, 핵심 구조, 최근 결과만 유지합니다.
+- 상세 일기는 [docs/diary/](docs/diary/) 폴더의 날짜별 파일로 관리합니다.
+- 새 일기는 [일기 템플릿](docs/diary/TEMPLATE.md)을 기준으로 작성합니다.
+- 중복 기록을 줄이기 위해 `docs/daily-prediction-diary.md`는 상세 일기 본문이 아니라 운영 가이드로 사용합니다.
