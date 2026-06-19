@@ -1,0 +1,81 @@
+name: 모델/데이터 문제 해결 기록
+description: 예측 모델, 데이터 수집, 자동화, 문서화 문제를 포트폴리오 형식으로 기록합니다.
+title: "[문제해결] "
+labels: ["model", "evaluation"]
+body:
+  - type: input
+    id: period
+    attributes:
+      label: 기간
+      description: 발견일, 수정일, 검증일을 적습니다.
+      placeholder: "예: 2026-06-19 ~ 2026-06-20"
+    validations:
+      required: true
+  - type: dropdown
+    id: category
+    attributes:
+      label: 분류
+      options:
+        - data
+        - model
+        - evaluation
+        - risk
+        - docs
+        - automation
+    validations:
+      required: true
+  - type: textarea
+    id: problem
+    attributes:
+      label: 문제
+      description: 어떤 문제가 있었는지 한두 문단으로 설명합니다.
+      placeholder: "예측 후보와 최종 행동이 섞여 보여 상승 후보를 진입 후보로 오해할 수 있었다."
+    validations:
+      required: true
+  - type: textarea
+    id: impact
+    attributes:
+      label: 영향
+      description: 모델 성능, 자동화, GitHub 표시, 해석 위험 중 어디에 영향을 줬는지 적습니다.
+    validations:
+      required: true
+  - type: textarea
+    id: cause
+    attributes:
+      label: 원인
+      description: 데이터, 라벨, 리스크 게이트, 인코딩, 자동화 중복 등 원인을 적습니다.
+    validations:
+      required: true
+  - type: textarea
+    id: solution
+    attributes:
+      label: 해결
+      description: 수정한 코드, 문서, 리포트, 정책을 적습니다.
+    validations:
+      required: true
+  - type: textarea
+    id: verification
+    attributes:
+      label: 검증
+      description: 실행한 스크립트, 생성된 파일, 핵심 수치를 적습니다.
+      placeholder: "예: python scripts/build_model_monitoring_dashboard.py 실행, switch_candidate_count=0"
+    validations:
+      required: true
+  - type: dropdown
+    id: result
+    attributes:
+      label: 결과
+      options:
+        - 메인 반영
+        - shadow 관찰
+        - 보류
+        - 문서화 완료
+    validations:
+      required: true
+  - type: textarea
+    id: next_steps
+    attributes:
+      label: 다음 과제
+      description: 남은 리스크와 다음 확인 조건을 적습니다.
+    validations:
+      required: false
