@@ -25,7 +25,7 @@
 | --- | --- | --- |
 | 예상 수익률 구간 보정 | 최근 5개 평가일 기준 구간 적중률 63.3%, 하단 이탈률 31.7%를 반영해 하단 구간을 평균 1.814%p 보수화 | [구간 보정 요약](reports/return_interval_calibration_summary.json) |
 | 원본/보정값 동시 기록 | `expected_return_low_pct_raw`와 보정 후 `expected_return_low_pct`를 함께 남겨 사후 검증 가능 | [내일 예측 CSV](reports/tomorrow_sector_prediction.csv) |
-| 예측 후보와 최종 행동 분리 유지 | 2026-06-22 예측 후보는 조선/방산·자동차·금융·2차전지지만, 최종 행동은 전 섹터 회피 우선 | [예상 수익률 구간 리포트](reports/expected_return_interval_report.md) |
+| 예측 후보와 최종 행동 분리 유지 | 2026-06-22 예측 레이어 상위 후보는 조선/방산·자동차·금융·2차전지·게임/엔터지만, 최종 행동은 전 섹터 회피 우선 | [예상 수익률 구간 리포트](reports/expected_return_interval_report.md) |
 | 포트폴리오 문제 해결 기록 추가 | 문제-원인-점검-해결-검증 흐름으로 36번 문제 기록 | [문제 해결 기록](docs/problem-solving-log.md) |
 
 ## 최신 운영 기록
