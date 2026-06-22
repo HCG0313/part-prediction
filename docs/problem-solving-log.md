@@ -1,6 +1,6 @@
 # 문제 해결 기록
 
-최근 업데이트: 2026-06-21 예상 수익률 구간 보정 기준
+최근 업데이트: 2026-06-22 패닉 반등 관찰 레이어 반영
 
 > 이 문서는 `파트 예측` 프로젝트에서 발견한 데이터 수집, 전처리, 모델, 문서화 문제를 하나씩 기록한 로그이다.  
 > 포트폴리오 관점에서 단순 결과보다 "문제 정의 - 원인 - 해결 - 검증" 흐름을 보여주는 것이 목적이다.
@@ -16,6 +16,7 @@
 
 | 날짜 | 문제 | 원인 | 해결 방향 | 상태 |
 | --- | --- | --- | --- | --- |
+| 2026-06-22 | 패닉장 반등 후보가 메인 예측표에 보이지 않음 | 회피 게이트는 유효했지만 반도체/전자 같은 급락장 반등 후보가 최종 예측표에서 드러나지 않음 | panic_rebound 관찰 레이어를 예측 CSV와 리포트에 추가하고 최종 행동은 자동 완화하지 않음 | 개선 완료 |
 | 2026-06-04 | 휴장일 데이터 중복 수집 | API가 휴장일에 직전 거래일 데이터를 반환할 수 있음 | 한국 거래일 캘린더, 기준일 검증, 비거래일 수집 차단 | 개선 완료 |
 | 2026-06-04 | 환율 수집 상태 불명확 | 환율은 주식시장 휴장일과 달리 별도 고시 일정이 있음 | ECOS 수집 구조와 상태값 분리 | 개선 완료 |
 | 2026-06-04 | 결측치와 이상치 처리 기준 혼재 | 원시 스케일, 고결측, 저분산 변수가 학습에 섞임 | 전처리 단계에서 제거 기준 분리 | 개선 완료 |
@@ -905,13 +906,13 @@ LightGBM `rank_xendcg` shadow 랭커를 검증했지만 메인 V5보다 RankIC, 
 
 ### 최신 후보
 
-2026-06-22 기준 최신 패닉 반등 관찰 후보는 다음과 같다.
+2026-06-22 장마감 이후 최신 패닉 반등 관찰 후보는 다음과 같다.
 
 | 순위 | 섹터 | 관찰 라벨 | 기존 최종 행동 | 비고 |
 |---:|---|---|---|---|
-| 1 | 자동차 | 방어 추적 | 회피 우선 | 상대강도와 대형주 쏠림 차이가 우호적 |
-| 2 | 조선/방산 | 방어 추적 | 회피 우선 | V5 예측 순위는 높지만 환율 스트레스 확인 필요 |
-| 3 | 금융 | 방어 추적 | 회피 우선 | 상대강도는 강하지만 과열 완화 여부 확인 필요 |
+| 1 | 반도체/전자 | 방어 추적 | 관망 | 예측 레이어 1위와 패닉 반등 점수 1위가 동시에 발생 |
+| 2 | 화학/정유 | 방어 관찰 | 회피 우선 | 시장 대비 상대 방어와 품질 점수가 일부 유지 |
+| 3 | 바이오 | 방어 관찰 | 회피 우선 | 반등 후보로는 남지만 최종 행동은 여전히 회피 우선 |
 
 ### 산출물
 
@@ -1032,3 +1033,74 @@ Qlib와 MLflow 같은 실험 관리 도구는 모델 실행마다 metric, parame
 ### 다음 단계
 
 2026-06-22 실제 결과가 붙으면 보정 후 하단 구간이 실제 하락을 더 잘 포함했는지 확인한다. 구간 적중률이 계속 낮으면 conformal calibration 방식으로 보정폭을 다시 계산하고, 반대로 지나치게 넓어져 후보 해석력이 떨어지면 보정폭 상한을 낮춘다.
+
+## 37. 2026-06-22 패닉장 반등 후보가 메인 예측표에 보이지 않는 문제
+
+### 문제
+
+2026-06-22 실제 시장은 평균 섹터 수익률이 약 -2.00%인 약세장이었지만, 반도체/전자는 +4.51%로 단독 강세를 보였다. 전일 예측의 최종 행동은 12개 섹터 모두 `회피 우선`이었기 때문에 시장 전체 위험을 피하라는 방향은 유효했다.
+
+그러나 예측 레이어 Top3였던 조선/방산, 자동차, 금융은 실제 순위 10~12위로 밀렸고, 실제 1위였던 반도체/전자는 메인 예측표에서 반등 주도 후보로 충분히 드러나지 않았다. 즉 문제는 리스크 게이트 자체가 아니라, 패닉장 안에서 먼저 반등할 후보를 메인 결과표에 표시하지 못한 것이다.
+
+### 외부 사례 기반 판단
+
+Momentum Crashes 논문은 시장 급락과 높은 변동성 이후 기존 모멘텀 구조가 무너지고, 눌렸던 대상이 급반등할 수 있다고 설명한다. Qlib는 예측 모델과 포트폴리오 전략을 분리하고, FinRL은 turbulence/VIX 같은 위험 지표로 시장 리스크를 별도로 제어한다. Meta-labeling 접근도 1차 예측 신호와 실제 행동 여부를 분리한다.
+
+따라서 이번 문제는 `회피 우선`을 풀어주는 방식이 아니라, 최종 행동을 유지하면서 패닉장 반등 후보를 별도 관찰 레이어로 표시하는 방식이 맞다고 판단했다.
+
+### 점검
+
+- 최신 예측 파일에는 `final_rank_score_v5`, `prediction_layer_score`, `relative_strength_component_v4`, `qlib_quality_component_v5`, `paper_signal_component_v5`, `krx_largecap_return_gap`, `krx_trade_value_weighted_return` 등 필요한 원천 컬럼이 모두 존재했다.
+- 현재 시장 국면은 `risk_off_selloff`로 분류되어 패닉 반등 관찰 레이어가 작동할 조건이었다.
+- `track_panic_rebound_watch_shadow.py`의 별도 shadow 리포트는 2026-06-22 기준 재계산 결과 `safe_to_use_watch_label=true`, `safe_to_promote_final_action=false`로 나왔다.
+- 따라서 최종 행동을 자동 완화하지 않고 표시용 컬럼만 추가하는 것은 안전하다고 판단했다.
+
+### 해결
+
+- `scripts/build_tomorrow_prediction.py`에 `add_panic_rebound_watch_layer()`를 추가했다.
+- `panic_rebound_watch_score`로 패닉장 반등 관찰 점수를 계산했다.
+- `panic_rebound_action_label`로 `방어 추적`, `방어 관찰`, `회피 유지`를 분리했다.
+- `panic_rebound_candidate_rank`로 반등 후보 순위를 저장했다.
+- `panic_rebound_reason`과 `panic_rebound_confirm_condition`을 추가해 왜 후보인지와 다음 장 확인 조건을 함께 남겼다.
+- `reports/prediction_action_layer_report.md`에 `패닉 반등 관찰 후보` 섹션을 추가했다.
+- 장마감 자동화에는 `track_panic_rebound_watch_shadow.py` 실행 단계를 추가해 shadow 리포트가 오래된 날짜에 머무르지 않게 했다.
+
+### 함께 발견한 오류
+
+예측 생성 중 `return_interval_lower_calibration_padding_pct`와 `return_interval_upper_calibration_padding_pct` 컬럼이 없을 때 리포트 생성 함수가 정수 `0`에 `.fillna()`를 호출하면서 멈출 수 있는 문제가 발견됐다.
+
+이 부분은 `numeric_series()`를 사용하도록 수정해, 해당 컬럼이 없더라도 0으로 안전하게 처리하도록 바꿨다. 이 오류는 패닉 반등 레이어 자체의 오류는 아니지만, 예측 리포트 생성 안정성과 관련되어 함께 수정했다.
+
+### 확인 결과
+
+2026-06-23 대상 최신 예측표에는 다음 패닉 반등 후보가 추가되었다.
+
+| 순위 | 섹터 | 패닉 반등 라벨 | 반등 점수 | 최종 행동 | 해석 |
+| ---: | --- | --- | ---: | --- | --- |
+| 1 | 반도체/전자 | 방어 추적 | 0.875 | 관망 | 예측 레이어 1위와 패닉 반등 점수 1위가 동시에 발생 |
+| 2 | 화학/정유 | 방어 관찰 | 0.661 | 회피 우선 | 시장 대비 상대 방어와 품질 점수가 일부 유지 |
+| 3 | 바이오 | 방어 관찰 | 0.589 | 회피 우선 | 관찰 후보지만 최종 행동은 아직 보수적 |
+
+검증 결과는 다음과 같다.
+
+- `python -m py_compile scripts/build_tomorrow_prediction.py` 통과
+- `python scripts/build_tomorrow_prediction.py` 성공
+- `python scripts/track_panic_rebound_watch_shadow.py` 성공
+- `python scripts/check_text_encoding_health.py` 통과
+- `tomorrow_sector_prediction_history.csv` 중복 없음
+
+### 결론
+
+이번 개선으로 모델은 패닉장에서도 `무조건 회피`와 `무리한 진입` 사이에 `방어 추적/방어 관찰`이라는 중간 해석층을 갖게 되었다. 다만 랭킹 품질 게이트가 `severe`이고 shadow 검증도 아직 최종 행동 완화를 허용하지 않기 때문에, 이 레이어는 관찰용으로만 사용한다.
+
+### 산출물
+
+- `scripts/build_tomorrow_prediction.py`
+- `scripts/run_daily_collection.ps1`
+- `scripts/track_panic_rebound_watch_shadow.py`
+- `reports/tomorrow_sector_prediction.csv`
+- `reports/tomorrow_sector_prediction_summary.json`
+- `reports/prediction_action_layer_report.md`
+- `reports/panic_rebound_watch_shadow_summary.json`
+- `reports/panic_rebound_watch_shadow_report.md`
+- `docs/diary/2026-06-22.md`

@@ -1,0 +1,4 @@
+﻿sector,panic_rebound_action_label,panic_rebound_candidate_rank,panic_rebound_watch_score,panic_rebound_score_rank,panic_rebound_relative_pct,panic_rebound_largecap_gap_pct,panic_rebound_overheat_pct,panic_rebound_fx_stress_pct,final_action,prediction_layer_rank,action_layer_label
+반도체/전자,방어 추적,1,0.8750000000000001,1.0,1.0,0.16666666666666666,0.3333333333333333,0.16666666666666666,관망,1,관망
+화학/정유,방어 관찰,2,0.6608333333333333,3.0,0.9166666666666666,0.6666666666666666,0.08333333333333333,0.9166666666666666,회피 우선,3,회피 우선
+바이오,방어 관찰,3,0.5891666666666667,4.0,0.5,0.5,0.4166666666666667,0.3333333333333333,회피 우선,4,회피 우선

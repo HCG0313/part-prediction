@@ -1,153 +1,174 @@
 {
-  "created_at": "2026-06-21T23:04:59",
-  "prediction_base_date": "2026-06-19",
-  "prediction_target_date": "2026-06-22",
+  "created_at": "2026-06-22T21:24:16",
+  "prediction_base_date": "2026-06-22",
+  "prediction_target_date": "2026-06-23",
   "market_day_state": "trading_day",
   "collection_mode": "full_market",
-  "prediction_target_state": "weekend_gap",
-  "target_gap_days": 3,
+  "prediction_target_state": "next_trading_day",
+  "target_gap_days": 1,
   "rows": 12,
   "top_sectors": [
+    "반도체/전자",
     "조선/방산",
-    "자동차",
-    "화학/정유",
+    "바이오",
     "철강/소재",
-    "2차전지"
+    "화학/정유"
   ],
   "prediction_layer_top_sectors": [
+    "반도체/전자",
     "조선/방산",
-    "자동차",
-    "금융",
-    "2차전지",
-    "게임/엔터"
+    "화학/정유",
+    "바이오",
+    "2차전지"
   ],
   "top_decision_sectors": [
+    "반도체/전자",
     "조선/방산",
-    "자동차",
-    "2차전지",
-    "금융",
-    "인터넷/플랫폼"
+    "바이오",
+    "화학/정유",
+    "게임/엔터"
   ],
   "action_layer_top_sectors": [
+    "반도체/전자",
     "조선/방산",
-    "자동차",
-    "2차전지",
-    "금융",
-    "인터넷/플랫폼"
+    "바이오",
+    "화학/정유",
+    "게임/엔터"
   ],
   "prediction_action_alignment_counts": {
     "약신호-회피일치": 10,
     "상승예측-행동보류": 2
   },
   "action_layer_risk_state_counts": {
-    "리스크 차단": 12
+    "리스크 차단": 11,
+    "품질 주의": 1
   },
   "prediction_action_layer_report": "reports/prediction_action_layer_report.md",
   "decision_policy_version": "decision_layer_v9_ranking_quality_soft_gate",
-  "fomo_blend_weight": 0.094,
+  "fomo_blend_weight": 0.1108,
   "fomo_blend_validation_window": "last_60",
-  "ranking_quality_gate_level": "caution",
+  "ranking_quality_gate_level": "severe",
   "ranking_quality_gate_reason": "랭킹 품질 경고 존재; 전체 Top3 겹침률 30% 미만; 최근 10거래일 RankIC 음수; 최근 10거래일 Top3-Bottom3 spread 음수",
-  "ranking_quality_gate_downgrade_count": 0,
-  "ranking_quality_gate_warning_count": 1,
+  "ranking_quality_gate_downgrade_count": 1,
+  "ranking_quality_gate_warning_count": 3,
   "ranking_quality_gate_metrics": {
-    "latest_date": "2026-06-19",
-    "all_rank_ic_spearman": 0.04462245706643336,
-    "all_top3_overlap": 0.2962962962962963,
-    "last5_rank_ic_spearman": 0.043356643356643354,
-    "last5_top3_spread": 0.513194936198995,
-    "last10_rank_ic_spearman": -0.036019501974655435,
-    "last10_top3_spread": -0.14983146036360467
+    "latest_date": "2026-06-22",
+    "all_rank_ic_spearman": 0.023548278404969834,
+    "all_top3_overlap": 0.2976190476190476,
+    "last5_rank_ic_spearman": -0.1202797202797203,
+    "last5_top3_spread": -0.5059293638339459,
+    "last10_rank_ic_spearman": -0.08741258741258742,
+    "last10_top3_spread": -0.2985361970333994
   },
   "final_action_counts": {
-    "회피 우선": 12
+    "회피 우선": 11,
+    "관망": 1
   },
   "score_action_counts": {
-    "회피 우선": 12
+    "회피 우선": 10,
+    "보조 관찰": 1,
+    "관망": 1
   },
   "decision_action_counts": {
-    "회피 우선": 12
+    "회피 우선": 11,
+    "방어 관찰": 1
   },
-  "action_conflict_count": 0,
+  "action_conflict_count": 2,
   "signal_conflict_type_counts": {
-    "상승신호-강한리스크충돌": 8,
-    "약신호-회피일치": 4
+    "상승신호-강한리스크충돌": 10,
+    "상승신호-보수관찰": 1,
+    "상승신호-리스크충돌": 1
   },
   "avoid_pressure_top_sectors": [
-    "통신",
-    "화학/정유",
-    "철강/소재",
-    "바이오",
-    "인터넷/플랫폼"
-  ],
-  "defensive_watch_candidate_count": 4,
-  "defensive_watch_candidate_sectors": [
-    "조선/방산",
     "자동차",
     "금융",
-    "2차전지"
-  ],
-  "panic_watch_action_counts": {
-    "회피 유지": 6,
-    "방어 추적": 4,
-    "강한 회피": 2
-  },
-  "high_signal_conflict_sectors": [
     "철강/소재",
+    "유통/소비",
+    "통신"
+  ],
+  "defensive_watch_candidate_count": 0,
+  "defensive_watch_candidate_sectors": [],
+  "panic_watch_action_counts": {
+    "회피 유지": 11,
+    "일반 판단": 1
+  },
+  "operational_action_counts": {
+    "회피 유지": 11,
+    "관망": 1
+  },
+  "operational_watch_sectors": [],
+  "panic_rebound_action_counts": {
+    "회피 유지": 9,
+    "방어 관찰": 2,
+    "방어 추적": 1
+  },
+  "panic_rebound_candidate_count": 3,
+  "panic_rebound_strict_candidate_count": 1,
+  "panic_rebound_candidate_sectors": [
+    "반도체/전자",
     "화학/정유",
+    "바이오"
+  ],
+  "panic_rebound_strict_candidate_sectors": [
+    "반도체/전자"
+  ],
+  "high_signal_conflict_sectors": [
+    "금융",
     "자동차",
     "조선/방산",
-    "인터넷/플랫폼"
+    "철강/소재",
+    "유통/소비"
   ],
   "decision_profile_counts": {
-    "weak": 6,
+    "weak": 7,
     "mixed": 4,
-    "defensive_relative": 2
+    "defensive_relative": 1
   },
   "decision_confidence_counts": {
-    "low": 12
+    "low": 11,
+    "medium": 1
   },
   "expected_return_grade_counts": {
-    "상승 우위": 4,
-    "제한적 상승": 4,
-    "중립/오차 큼": 4
+    "상승 우위": 10,
+    "제한적 상승": 2
   },
   "return_interval_label_counts": {
-    "상승 가능/오차 큼": 11,
-    "상승 중심/하단 음수": 1
+    "상승 가능/오차 큼": 6,
+    "상승 중심/하단 음수": 6
   },
   "return_interval_confidence_counts": {
-    "낮음": 12
+    "낮음": 11,
+    "보통": 1
   },
   "return_interval_top_sectors": [
     "조선/방산",
+    "바이오",
+    "반도체/전자",
     "자동차",
-    "화학/정유",
-    "2차전지",
     "철강/소재"
   ],
   "return_interval_widest_sectors": [
     "2차전지",
+    "자동차",
     "반도체/전자",
     "조선/방산",
-    "화학/정유",
     "통신"
   ],
   "return_interval_calibration_enabled_counts": {
-    "true": 12
+    "false": 12
   },
-  "return_interval_avg_lower_calibration_padding": 1.8142451742277574,
+  "return_interval_avg_lower_calibration_padding": 0.0,
   "return_interval_avg_upper_calibration_padding": 0.0,
   "return_interval_calibration_summary": "reports\\return_interval_calibration_summary.json",
   "expected_return_interval_report": "reports\\expected_return_interval_report.md",
   "top_return_risk_adjusted_sectors": [
     "조선/방산",
+    "반도체/전자",
+    "바이오",
     "자동차",
-    "화학/정유",
-    "철강/소재",
     "2차전지"
   ],
-  "avg_return_risk_score_adjustment": -0.0007138061878095653,
+  "avg_return_risk_score_adjustment": 0.007058899348658196,
   "rule_confidence_counts": {
     "low": 12
   },
@@ -155,22 +176,22 @@
     "backtest_empirical_v1": 12
   },
   "confidence_reference_rows": 2280,
-  "confidence_reference_end_date": "2026-06-19",
+  "confidence_reference_end_date": "2026-06-22",
   "intraday_bridge_top_sectors": [
     "반도체/전자",
     "인터넷/플랫폼",
-    "조선/방산",
-    "금융",
-    "게임/엔터"
+    "유통/소비",
+    "게임/엔터",
+    "조선/방산"
   ],
   "intraday_reversal_risk_top_sectors": [
     "인터넷/플랫폼",
+    "유통/소비",
     "반도체/전자",
     "자동차",
-    "철강/소재",
-    "유통/소비"
+    "철강/소재"
   ],
   "v4_enabled": true,
   "v5_enabled": true,
-  "v5_no_trade_count": 12
+  "v5_no_trade_count": 0
 }

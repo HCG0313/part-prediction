@@ -1,0 +1,37 @@
+{
+  "status": "ok",
+  "created_at": "2026-06-22T20:59:26",
+  "source": "reports\\tomorrow_sector_prediction_history.csv",
+  "selected_columns": {
+    "lower": "return_interval_lower_pct",
+    "center": "return_interval_center_pct",
+    "upper": "return_interval_upper_pct"
+  },
+  "rows": 12,
+  "target_days": 1,
+  "date_min": "2026-06-22",
+  "date_max": "2026-06-22",
+  "coverage_rate_all": 0.8333333333333334,
+  "below_lower_rate_all": 0.16666666666666666,
+  "above_upper_rate_all": 0.0,
+  "avg_interval_width_pct": 8.325540443276674,
+  "avg_center_abs_error_pct": 3.2475518562356087,
+  "last5_coverage_rate": 0.8333333333333334,
+  "last5_avg_interval_width_pct": 8.325540443276674,
+  "latest_date": "2026-06-22",
+  "latest": {
+    "prediction_target_date": "2026-06-22",
+    "rows": 12,
+    "coverage_rate": 0.8333333333333334,
+    "below_lower_rate": 0.16666666666666666,
+    "above_upper_rate": 0.0,
+    "avg_interval_width_pct": 8.325540443276674,
+    "avg_center_abs_error_pct": 3.2475518562356087,
+    "market_avg_return": -1.9960121555082513
+  },
+  "interpretation": "This report checks whether realized sector returns landed inside the predicted return interval. Low coverage means the interval is too narrow or poorly calibrated; very wide intervals can cover more returns but provide weaker trading information.",
+  "outputs": {
+    "coverage_log": "reports\\expected_return_interval_coverage.csv",
+    "by_date": "reports\\expected_return_interval_coverage_by_date.csv"
+  }
+}
