@@ -1,0 +1,284 @@
+{
+  "trained_at": "2026-06-23T20:33:36",
+  "model": "sector_rank_model_v5",
+  "objective": "Qlib-lite factors plus paper-inspired attention/FOMO, FX sensitivity, sector graph factors, purged walk-forward validation, and no-trade portfolio gate",
+  "absorbed_ideas": [
+    "Qlib-style alpha factor expansion",
+    "KRX trade-value weighted sector return and large-cap divergence",
+    "Kaggle 30-year global market risk factors with latest public market extension",
+    "purged walk-forward validation",
+    "portfolio-level no-trade backtest",
+    "capitulation and weak-breadth gating",
+    "Barber-Odean/Da-style investor attention and FOMO pressure features",
+    "Tetlock/FinBERT-lite news/disclosure attention proxy",
+    "sector-specific FX beta and shock sensitivity",
+    "HIST/TFT-lite sector relationship and temporal attention factors"
+  ],
+  "date_range": {
+    "min": "2023-05-02",
+    "max": "2026-06-22"
+  },
+  "train_rows": 9156,
+  "feature_count": 301,
+  "walk_forward_strategy": {
+    "days": 315,
+    "top3_avg_return": 0.27667241597808584,
+    "top3_avg_excess_return": 0.06586896306848879,
+    "top3_positive_rate": 0.5343915343915344,
+    "top3_excess_positive_rate": 0.4634920634920635,
+    "top3_overlap_actual_top3": 0.32910052910052906,
+    "top1_avg_return": 0.415017213430994,
+    "top1_avg_excess_return": 0.20421376052139711,
+    "long_short_avg_excess": 0.1801997196945675,
+    "all_sector_avg_return": 0.16765079086725765,
+    "all_sector_avg_excess": -0.043152662042339314
+  },
+  "walk_forward_stability": {
+    "folds": 5,
+    "top1_avg_return_median": 0.37921058080578735,
+    "top1_avg_return_worst": 0.31148544570610154,
+    "top1_avg_excess_return_median": 0.17685236032743393,
+    "top1_avg_excess_return_worst": 0.11457332192585003,
+    "top3_avg_return_median": 0.24988638961659826,
+    "top3_avg_return_worst": 0.21070883072930302,
+    "top3_avg_excess_return_median": 0.037750639491622544,
+    "top3_avg_excess_return_worst": -0.06576071172390299,
+    "top3_positive_rate_median": 0.5238095238095237,
+    "top3_positive_rate_worst": 0.5079365079365079,
+    "portfolio_avg_daily_return_median": 0.21568706626903983,
+    "portfolio_avg_daily_return_worst": 0.07112166333038702,
+    "portfolio_cumulative_return_median": 13.707518582997658,
+    "portfolio_cumulative_return_worst": 3.5751455840294932,
+    "portfolio_max_drawdown_median": -14.232387911365096,
+    "portfolio_max_drawdown_worst": -21.77142066780172,
+    "portfolio_trade_hit_rate_median": 0.5178571428571429,
+    "portfolio_trade_hit_rate_worst": 0.5,
+    "portfolio_trade_days_median": 55.0,
+    "portfolio_trade_days_worst": 46.0,
+    "ndcg_at_3_median": 0.4965359250784048,
+    "ndcg_at_3_worst": 0.4686070632720692
+  },
+  "fold_summaries": [
+    {
+      "fold": 1,
+      "test_start": "2025-03-07",
+      "test_end": "2025-06-10",
+      "train_rows": 5364,
+      "test_rows": 756,
+      "strategy": {
+        "days": 63,
+        "top3_avg_return": 0.21070883072930302,
+        "top3_avg_excess_return": 0.037750639491622544,
+        "top3_positive_rate": 0.5238095238095237,
+        "top3_excess_positive_rate": 0.4656084656084656,
+        "top3_overlap_actual_top3": 0.30687830687830686,
+        "top1_avg_return": 0.37921058080578735,
+        "top1_avg_excess_return": 0.20625238956810676,
+        "long_short_avg_excess": 0.051464154898162244,
+        "all_sector_avg_return": 0.1907864322202399,
+        "all_sector_avg_excess": 0.017828240982559418
+      },
+      "portfolio": {
+        "days": 63,
+        "trade_days": 55,
+        "no_trade_days": 8,
+        "avg_daily_return": 0.07112166333038702,
+        "avg_trade_return": 0.08146663254207968,
+        "trade_hit_rate": 0.509090909090909,
+        "cumulative_return": 3.5751455840294932,
+        "max_drawdown": -14.232387911365096
+      },
+      "ndcg_at_3": 0.4966538922228266,
+      "rank_ic": {
+        "days": 63,
+        "mean_rank_ic": 0.02367129515540089,
+        "median_rank_ic": -0.006993006993006993,
+        "positive_rank_ic_rate": 0.49206349206349204
+      }
+    },
+    {
+      "fold": 2,
+      "test_start": "2025-06-11",
+      "test_end": "2025-09-08",
+      "train_rows": 6120,
+      "test_rows": 756,
+      "strategy": {
+        "days": 63,
+        "top3_avg_return": 0.25592225169279176,
+        "top3_avg_excess_return": 0.12128916631412419,
+        "top3_positive_rate": 0.5079365079365079,
+        "top3_excess_positive_rate": 0.47619047619047605,
+        "top3_overlap_actual_top3": 0.34391534391534384,
+        "top1_avg_return": 0.31148544570610154,
+        "top1_avg_excess_return": 0.17685236032743393,
+        "long_short_avg_excess": 0.2175294922101302,
+        "all_sector_avg_return": 0.12960922062334254,
+        "all_sector_avg_excess": -0.005023864755324902
+      },
+      "portfolio": {
+        "days": 63,
+        "trade_days": 57,
+        "no_trade_days": 6,
+        "avg_daily_return": 0.21568706626903983,
+        "avg_trade_return": 0.23839096798157042,
+        "trade_hit_rate": 0.543859649122807,
+        "cumulative_return": 13.707518582997658,
+        "max_drawdown": -9.699880258880844
+      },
+      "ndcg_at_3": 0.4965359250784048,
+      "rank_ic": {
+        "days": 63,
+        "mean_rank_ic": 0.02918486313086237,
+        "median_rank_ic": 0.0,
+        "positive_rank_ic_rate": 0.49206349206349204
+      }
+    },
+    {
+      "fold": 3,
+      "test_start": "2025-09-09",
+      "test_end": "2025-12-11",
+      "train_rows": 6876,
+      "test_rows": 756,
+      "strategy": {
+        "days": 63,
+        "top3_avg_return": 0.24988638961659826,
+        "top3_avg_excess_return": -0.05804924357052023,
+        "top3_positive_rate": 0.5502645502645502,
+        "top3_excess_positive_rate": 0.4285714285714285,
+        "top3_overlap_actual_top3": 0.33333333333333326,
+        "top1_avg_return": 0.4559453024441674,
+        "top1_avg_excess_return": 0.148009669257049,
+        "long_short_avg_excess": 0.09540908675615128,
+        "all_sector_avg_return": 0.20850567481713939,
+        "all_sector_avg_excess": -0.09942995836997909
+      },
+      "portfolio": {
+        "days": 63,
+        "trade_days": 56,
+        "no_trade_days": 7,
+        "avg_daily_return": 0.33265325458778067,
+        "avg_trade_return": 0.37423491141125326,
+        "trade_hit_rate": 0.5178571428571429,
+        "cumulative_return": 21.87585779872272,
+        "max_drawdown": -15.544381813549801
+      },
+      "ndcg_at_3": 0.4686070632720692,
+      "rank_ic": {
+        "days": 63,
+        "mean_rank_ic": 0.007940260510339343,
+        "median_rank_ic": 0.006993006993006993,
+        "positive_rank_ic_rate": 0.5238095238095238
+      }
+    },
+    {
+      "fold": 4,
+      "test_start": "2025-12-12",
+      "test_end": "2026-03-19",
+      "train_rows": 7632,
+      "test_rows": 756,
+      "strategy": {
+        "days": 63,
+        "top3_avg_return": 0.4174794073325269,
+        "top3_avg_excess_return": -0.06576071172390299,
+        "top3_positive_rate": 0.5714285714285714,
+        "top3_excess_positive_rate": 0.4497354497354497,
+        "top3_overlap_actual_top3": 0.3015873015873015,
+        "top1_avg_return": 0.5978134409822802,
+        "top1_avg_excess_return": 0.11457332192585003,
+        "long_short_avg_excess": 0.09534115076530081,
+        "all_sector_avg_return": 0.3770405209921584,
+        "all_sector_avg_excess": -0.10619959806427147
+      },
+      "portfolio": {
+        "days": 63,
+        "trade_days": 55,
+        "no_trade_days": 8,
+        "avg_daily_return": 0.4802260341047817,
+        "avg_trade_return": 0.5500770936109316,
+        "trade_hit_rate": 0.5272727272727272,
+        "cumulative_return": 30.786679493105673,
+        "max_drawdown": -12.912431361864908
+      },
+      "ndcg_at_3": 0.47889709047819196,
+      "rank_ic": {
+        "days": 62,
+        "mean_rank_ic": 0.01820581706076916,
+        "median_rank_ic": 0.006993006993006993,
+        "positive_rank_ic_rate": 0.5
+      }
+    },
+    {
+      "fold": 5,
+      "test_start": "2026-03-20",
+      "test_end": "2026-06-22",
+      "train_rows": 8388,
+      "test_rows": 756,
+      "strategy": {
+        "days": 63,
+        "top3_avg_return": 0.2493652005192089,
+        "top3_avg_excess_return": 0.2941149648311205,
+        "top3_positive_rate": 0.5185185185185185,
+        "top3_excess_positive_rate": 0.4973544973544974,
+        "top3_overlap_actual_top3": 0.3597883597883598,
+        "top1_avg_return": 0.3306312972166341,
+        "top1_avg_excess_return": 0.3753810615285456,
+        "long_short_avg_excess": 0.4412547138430928,
+        "all_sector_avg_return": -0.06768789431659213,
+        "all_sector_avg_excess": -0.022938130004680497
+      },
+      "portfolio": {
+        "days": 63,
+        "trade_days": 46,
+        "no_trade_days": 17,
+        "avg_daily_return": 0.11741166801768255,
+        "avg_trade_return": 0.1608029366329129,
+        "trade_hit_rate": 0.5,
+        "cumulative_return": 4.062315089204049,
+        "max_drawdown": -21.77142066780172
+      },
+      "ndcg_at_3": 0.5198548061761853,
+      "rank_ic": {
+        "days": 63,
+        "mean_rank_ic": 0.07840180492257692,
+        "median_rank_ic": 0.055944055944055944,
+        "positive_rank_ic_rate": 0.5238095238095238
+      }
+    }
+  ],
+  "portfolio_backtest": {
+    "days": 315,
+    "trade_days": 269,
+    "no_trade_days": 46,
+    "avg_daily_return": 0.2434199372619343,
+    "avg_trade_return": 0.2850456514405551,
+    "trade_hit_rate": 0.5204460966542751,
+    "cumulative_return": 95.35269959215577,
+    "max_drawdown": -21.77142066780171
+  },
+  "ndcg_at_3_walk_forward": 0.49210975544553553,
+  "rank_ic_walk_forward": {
+    "days": 314,
+    "mean_rank_ic": 0.031523085197694256,
+    "median_rank_ic": 0.006993006993006993,
+    "positive_rank_ic_rate": 0.5063694267515924
+  },
+  "latest_market_regime": [
+    {
+      "date": "2026-06-23",
+      "market_regime_v4": "capitulation",
+      "market_regime_risk_v4": 0.85,
+      "market_gate_v4": 0.58,
+      "market_sector_return_mean": -6.12842892324684,
+      "market_negative_sector_ratio": 1.0,
+      "market_avg_breadth_v4": 0.03333333333333333
+    }
+  ],
+  "latest_top_sectors": [
+    "유통/소비",
+    "조선/방산",
+    "반도체/전자",
+    "금융",
+    "2차전지"
+  ],
+  "latest_no_trade_count": 12
+}

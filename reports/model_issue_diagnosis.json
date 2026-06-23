@@ -1,0 +1,316 @@
+{
+  "created_at": "2026-06-23T20:33:58",
+  "accuracy": {
+    "status": "ok",
+    "rows": 348,
+    "date_min": "2026-05-12",
+    "date_max": "2026-06-23",
+    "all_positive_rate": 0.3649425287356322,
+    "all_avg_return": -0.7319603622567379,
+    "top1": {
+      "n": 29,
+      "positive_rate": 0.3103448275862069,
+      "avg_return": -0.7389077330318102
+    },
+    "top3": {
+      "n": 87,
+      "positive_rate": 0.3793103448275862,
+      "avg_return": -0.7342771873722208
+    },
+    "bottom3": {
+      "n": 87,
+      "positive_rate": 0.367816091954023,
+      "avg_return": -0.7166934168690097
+    },
+    "best_recent_sectors": [
+      {
+        "sector": "반도체/전자",
+        "n": 29,
+        "positive_rate": 0.4827586206896552,
+        "avg_return": 0.25349248302026456
+      },
+      {
+        "sector": "금융",
+        "n": 29,
+        "positive_rate": 0.41379310344827586,
+        "avg_return": -0.23647223294258696
+      },
+      {
+        "sector": "유통/소비",
+        "n": 29,
+        "positive_rate": 0.41379310344827586,
+        "avg_return": -0.2490435242249162
+      },
+      {
+        "sector": "바이오",
+        "n": 29,
+        "positive_rate": 0.3793103448275862,
+        "avg_return": -0.5535914041633134
+      },
+      {
+        "sector": "인터넷/플랫폼",
+        "n": 29,
+        "positive_rate": 0.3793103448275862,
+        "avg_return": -0.5777332183110552
+      }
+    ],
+    "weak_recent_sectors": [
+      {
+        "sector": "화학/정유",
+        "n": 29,
+        "positive_rate": 0.41379310344827586,
+        "avg_return": -0.8365572548970398
+      },
+      {
+        "sector": "조선/방산",
+        "n": 29,
+        "positive_rate": 0.3103448275862069,
+        "avg_return": -0.9702338028617217
+      },
+      {
+        "sector": "2차전지",
+        "n": 29,
+        "positive_rate": 0.3448275862068966,
+        "avg_return": -1.161690022972851
+      },
+      {
+        "sector": "철강/소재",
+        "n": 29,
+        "positive_rate": 0.3103448275862069,
+        "avg_return": -1.3318620450882581
+      },
+      {
+        "sector": "통신",
+        "n": 29,
+        "positive_rate": 0.2413793103448276,
+        "avg_return": -1.676311075899257
+      }
+    ],
+    "by_date": {
+      "2026-05-12": {
+        "top1_sector": "금융",
+        "top1_return": -2.589705737633049,
+        "top3_avg_return": -2.0987479538679334,
+        "bottom3_avg_return": -3.476520359559229
+      },
+      "2026-05-13": {
+        "top1_sector": "반도체/전자",
+        "top1_return": 6.882092100745066,
+        "top3_avg_return": 1.5144423019986102,
+        "bottom3_avg_return": 0.6109435350312054
+      },
+      "2026-05-14": {
+        "top1_sector": "조선/방산",
+        "top1_return": -1.0849310594292625,
+        "top3_avg_return": -0.7641435501723747,
+        "bottom3_avg_return": 3.353775571928912
+      },
+      "2026-05-15": {
+        "top1_sector": "반도체/전자",
+        "top1_return": -6.163524942569698,
+        "top3_avg_return": -5.584324805141218,
+        "bottom3_avg_return": -4.894740816404865
+      },
+      "2026-05-18": {
+        "top1_sector": "조선/방산",
+        "top1_return": -1.3136559898649751,
+        "top3_avg_return": -0.8855718580993521,
+        "bottom3_avg_return": -2.7617473208787473
+      },
+      "2026-05-19": {
+        "top1_sector": "조선/방산",
+        "top1_return": -2.054914189382923,
+        "top3_avg_return": -3.098950120603971,
+        "bottom3_avg_return": -2.6950981149346322
+      },
+      "2026-05-20": {
+        "top1_sector": "조선/방산",
+        "top1_return": -2.0729355906470697,
+        "top3_avg_return": -2.209190265467743,
+        "bottom3_avg_return": -1.9616088953572186
+      },
+      "2026-05-21": {
+        "top1_sector": "반도체/전자",
+        "top1_return": 11.728055190566186,
+        "top3_avg_return": 6.804486084583563,
+        "bottom3_avg_return": 2.297466312690479
+      },
+      "2026-05-22": {
+        "top1_sector": "조선/방산",
+        "top1_return": 4.155964735163416,
+        "top3_avg_return": 2.9683724877119446,
+        "bottom3_avg_return": 3.6305142034076177
+      },
+      "2026-05-26": {
+        "top1_sector": "조선/방산",
+        "top1_return": 1.3925041154402538,
+        "top3_avg_return": 3.41816084466222,
+        "bottom3_avg_return": 0.25638822503744013
+      },
+      "2026-05-27": {
+        "top1_sector": "조선/방산",
+        "top1_return": -3.280037613220862,
+        "top3_avg_return": -3.814997181723015,
+        "bottom3_avg_return": -2.9136470273585218
+      },
+      "2026-05-28": {
+        "top1_sector": "바이오",
+        "top1_return": -2.585126999620404,
+        "top3_avg_return": -3.1896923074821566,
+        "bottom3_avg_return": -0.2948986954713364
+      },
+      "2026-05-29": {
+        "top1_sector": "2차전지",
+        "top1_return": -1.5002820890204749,
+        "top3_avg_return": 0.2803512888646456,
+        "bottom3_avg_return": -1.762437248717191
+      },
+      "2026-06-01": {
+        "top1_sector": "인터넷/플랫폼",
+        "top1_return": 3.096616200224491,
+        "top3_avg_return": 0.7462379784789445,
+        "bottom3_avg_return": -1.7659079609498385
+      },
+      "2026-06-02": {
+        "top1_sector": "인터넷/플랫폼",
+        "top1_return": -2.239588253713813,
+        "top3_avg_return": -3.6536372338100827,
+        "bottom3_avg_return": -2.413177307832498
+      },
+      "2026-06-04": {
+        "top1_sector": "금융",
+        "top1_return": 2.398040858786417,
+        "top3_avg_return": 0.6215077619342843,
+        "bottom3_avg_return": 0.21920924707131798
+      },
+      "2026-06-05": {
+        "top1_sector": "반도체/전자",
+        "top1_return": -4.39549660623787,
+        "top3_avg_return": -2.0740517104917857,
+        "bottom3_avg_return": -2.6737891869793216
+      },
+      "2026-06-08": {
+        "top1_sector": "반도체/전자",
+        "top1_return": -10.882381891158827,
+        "top3_avg_return": -8.483851346747551,
+        "bottom3_avg_return": -6.717822926837754
+      },
+      "2026-06-09": {
+        "top1_sector": "바이오",
+        "top1_return": 5.293477231403916,
+        "top3_avg_return": 3.689248794659282,
+        "bottom3_avg_return": 5.149931036250049
+      },
+      "2026-06-10": {
+        "top1_sector": "금융",
+        "top1_return": -1.7303040233372882,
+        "top3_avg_return": 1.1833626448800378,
+        "bottom3_avg_return": -0.46652217847463523
+      },
+      "2026-06-11": {
+        "top1_sector": "조선/방산",
+        "top1_return": -1.549662955744875,
+        "top3_avg_return": 0.44860474292667507,
+        "bottom3_avg_return": 3.7750575657834524
+      },
+      "2026-06-12": {
+        "top1_sector": "반도체/전자",
+        "top1_return": 11.268655272556892,
+        "top3_avg_return": 5.0859516352986365,
+        "bottom3_avg_return": 4.24696225892699
+      },
+      "2026-06-15": {
+        "top1_sector": "반도체/전자",
+        "top1_return": -0.168178239282415,
+        "top3_avg_return": 2.965554316397622,
+        "bottom3_avg_return": 1.1230086028406623
+      },
+      "2026-06-16": {
+        "top1_sector": "2차전지",
+        "top1_return": -1.2829781132396851,
+        "top3_avg_return": 1.0800939668793241,
+        "bottom3_avg_return": -0.32568638654497
+      },
+      "2026-06-17": {
+        "top1_sector": "조선/방산",
+        "top1_return": 0.0459749451316483,
+        "top3_avg_return": -1.3458996936417762,
+        "bottom3_avg_return": 0.17724767716667986
+      },
+      "2026-06-18": {
+        "top1_sector": "조선/방산",
+        "top1_return": -5.377896359901002,
+        "top3_avg_return": -2.715152358493439,
+        "bottom3_avg_return": -3.78180887614889
+      },
+      "2026-06-19": {
+        "top1_sector": "반도체/전자",
+        "top1_return": -3.642441929290932,
+        "top3_avg_return": -2.143762646160829,
+        "bottom3_avg_return": -1.9179021133275551
+      },
+      "2026-06-22": {
+        "top1_sector": "조선/방산",
+        "top1_return": -2.99946516626472,
+        "top3_avg_return": -3.080333080046115,
+        "bottom3_avg_return": 0.17274270656163004
+      },
+      "2026-06-23": {
+        "top1_sector": "반도체/전자",
+        "top1_return": -10.77619715838064,
+        "top3_avg_return": -6.958107171120846,
+        "bottom3_avg_return": -4.974040616120516
+      }
+    }
+  },
+  "datalab": {
+    "created_at": "2026-06-23T20:33:45",
+    "status": "ok",
+    "source": "datalab",
+    "rows": 324,
+    "error_count": 0
+  },
+  "krx": {
+    "collected_at": "2026-06-23T20:27:52",
+    "date_min": "2026-05-13",
+    "date_max": "2026-06-23",
+    "status": "ok",
+    "date_periods": 30,
+    "request_timeout_seconds": 12.0,
+    "max_runtime_seconds": 150.0,
+    "rows": {
+      "krx_index_daily": 1512,
+      "kospi_index_daily": 2142,
+      "kosdaq_index_daily": 1680,
+      "kospi_stock_daily": 39809,
+      "kosdaq_stock_daily": 54654,
+      "etf_daily": 0,
+      "kospi_stock_base": 946,
+      "kosdaq_stock_base": 1822
+    },
+    "normalized_stock_rows": 116321,
+    "actual_basDd": {
+      "krx_index_daily": "20260622",
+      "kospi_index_daily": "20260622",
+      "kosdaq_index_daily": "20260622",
+      "kospi_stock_daily": "20260622",
+      "kosdaq_stock_daily": "20260622",
+      "etf_daily": null,
+      "kospi_stock_base": "20260622",
+      "kosdaq_stock_base": "20260622"
+    },
+    "base_info_actual_basDd": {
+      "kospi_stock_base": "20260622",
+      "kosdaq_stock_base": "20260622"
+    }
+  },
+  "v5_trained_at": "2026-06-23T20:33:36",
+  "issues": [
+    {
+      "area": "score_calibration",
+      "problem": "Recent top-ranked sectors have weak hit rate.",
+      "cause": "News/FOMO attention and next-day return have diverged in recent sessions.",
+      "fix": "Recent sector reliability calibration is now applied to tomorrow_total_score."
+    }
+  ]
+}
