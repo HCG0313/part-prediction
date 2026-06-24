@@ -1,0 +1,96 @@
+{
+  "snapshot_version": "prediction_snapshot_v1",
+  "snapshot_created_at": "2026-06-24T21:44:58",
+  "prediction_base_date": "2026-06-24",
+  "prediction_target_date": "2026-06-25",
+  "model_files": [
+    {
+      "role": "sector_model_v2_latest_predictions",
+      "path": "reports/sector_model_v2_latest_predictions.csv",
+      "exists": true,
+      "size_bytes": 14779,
+      "modified_at": "2026-06-24T21:38:43",
+      "sha256": "129003c20c2472bbc3c6641c2cc7ef97023935bb7f11a3948d9bb2091d50a81f"
+    },
+    {
+      "role": "sector_model_v2_metrics",
+      "path": "reports/sector_model_v2_metrics.json",
+      "exists": true,
+      "size_bytes": 13152,
+      "modified_at": "2026-06-24T21:38:43",
+      "sha256": "c38f0c9901479457705a490121234e06fddafbccb4ea471ea837dcd4cea91c09"
+    },
+    {
+      "role": "sector_rank_model_v3_latest_predictions",
+      "path": "reports/sector_rank_model_v3_latest_predictions.csv",
+      "exists": true,
+      "size_bytes": 5052,
+      "modified_at": "2026-06-24T21:43:56",
+      "sha256": "52b27867b89aab2b9338bc620502f69c4b43f81915b7c1051ae604a2d3d4b20b"
+    },
+    {
+      "role": "sector_rank_model_v3_metrics",
+      "path": "reports/sector_rank_model_v3_metrics.json",
+      "exists": true,
+      "size_bytes": 4016,
+      "modified_at": "2026-06-24T21:43:56",
+      "sha256": "a7f1a5500494ecbfb287f64544ffb7cf57c92eb8bca2bbf9f0e3cad52938b973"
+    },
+    {
+      "role": "sector_rank_model_v4_latest_predictions",
+      "path": "reports/sector_rank_model_v4_latest_predictions.csv",
+      "exists": true,
+      "size_bytes": 6157,
+      "modified_at": "2026-06-24T21:44:05",
+      "sha256": "5e30a4b36376583f9c294041b698ec1f5058cd5cc46ab1dfea809c1c996d7df4"
+    },
+    {
+      "role": "sector_rank_model_v4_metrics",
+      "path": "reports/sector_rank_model_v4_metrics.json",
+      "exists": true,
+      "size_bytes": 2301,
+      "modified_at": "2026-06-24T21:44:05",
+      "sha256": "29a0ddc0067d21991fb06507e872e100f0ee55580a924fc2471e83368c9ddda8"
+    },
+    {
+      "role": "sector_rank_model_v5_latest_predictions",
+      "path": "reports/sector_rank_model_v5_latest_predictions.csv",
+      "exists": true,
+      "size_bytes": 15769,
+      "modified_at": "2026-06-24T21:44:43",
+      "sha256": "9773d483a56a120550e0cb2bb352e9e215a860f5ba972b8b8a167907847c81a7"
+    },
+    {
+      "role": "sector_rank_model_v5_metrics",
+      "path": "reports/sector_rank_model_v5_metrics.json",
+      "exists": true,
+      "size_bytes": 10558,
+      "modified_at": "2026-06-24T21:44:43",
+      "sha256": "0752fac9c59aca9cfee5c28b6b18a1414b3d907a0719e644928bef2bce1a74e9"
+    },
+    {
+      "role": "intraday_rebound_model_predictions",
+      "path": "reports/intraday_rebound_model_predictions.csv",
+      "exists": true,
+      "size_bytes": 2369,
+      "modified_at": "2026-06-24T21:44:52",
+      "sha256": "bdaf41492e1936f079dcf44497f6782e951f32ff869353e74a549c4830dca5eb"
+    },
+    {
+      "role": "intraday_rebound_model_metrics",
+      "path": "reports/intraday_rebound_model_metrics.json",
+      "exists": true,
+      "size_bytes": 1025,
+      "modified_at": "2026-06-24T21:44:52",
+      "sha256": "ee59aa98b5ecd583308f00b264d052ae75efb89648b4ebd65e2f042a53780950"
+    },
+    {
+      "role": "daily_portfolio_advisor",
+      "path": "reports/daily_portfolio_advisor.csv",
+      "exists": true,
+      "size_bytes": 11848,
+      "modified_at": "2026-06-24T21:44:47",
+      "sha256": "4ba66e5efc8a5833d2ec6678f18d31e6f478470c9fe8baae63b5d4cd8472d06a"
+    }
+  ]
+}

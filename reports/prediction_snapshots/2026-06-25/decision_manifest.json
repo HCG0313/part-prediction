@@ -1,0 +1,112 @@
+{
+  "snapshot_version": "prediction_snapshot_v1",
+  "snapshot_created_at": "2026-06-24T21:44:59",
+  "prediction_base_date": "2026-06-24",
+  "prediction_target_date": "2026-06-25",
+  "decision_policy_version": "decision_layer_v9_ranking_quality_soft_gate",
+  "market_day_state": "trading_day",
+  "collection_mode": "full_market",
+  "prediction_target_state": "next_trading_day",
+  "target_gap_days": 1,
+  "rows": 12,
+  "top_sectors": [
+    "바이오",
+    "조선/방산",
+    "2차전지",
+    "화학/정유",
+    "자동차"
+  ],
+  "top_decision_sectors": [
+    "바이오",
+    "조선/방산",
+    "2차전지",
+    "화학/정유",
+    "철강/소재"
+  ],
+  "top_return_risk_adjusted_sectors": [
+    "조선/방산",
+    "바이오",
+    "2차전지",
+    "자동차",
+    "철강/소재"
+  ],
+  "final_action_counts": {
+    "회피 우선": 9,
+    "관망": 3
+  },
+  "score_action_counts": {
+    "회피 우선": 6,
+    "보조 관찰": 3,
+    "관망": 3
+  },
+  "decision_action_counts": {
+    "회피 우선": 9,
+    "관망": 2,
+    "방어 관찰": 1
+  },
+  "decision_confidence_counts": {
+    "low": 10,
+    "medium": 2
+  },
+  "expected_return_grade_counts": {
+    "제한적 상승": 5,
+    "중립/오차 큼": 5,
+    "상승 우위": 2
+  },
+  "signal_conflict_type_counts": {
+    "약신호-회피일치": 5,
+    "상승신호-보수관찰": 3,
+    "상승신호-강한리스크충돌": 3,
+    "상승신호-리스크충돌": 1
+  },
+  "action_conflict_count": 5,
+  "high_signal_conflict_sectors": [
+    "2차전지",
+    "자동차",
+    "철강/소재",
+    "통신",
+    "화학/정유"
+  ],
+  "prediction_preview": [
+    {
+      "sector": "바이오",
+      "tomorrow_total_score": "0.7601632107802285",
+      "expected_return_grade": "상승 우위",
+      "signal_conflict_type": "상승신호-보수관찰",
+      "final_action": "관망",
+      "tomorrow_action": "관망"
+    },
+    {
+      "sector": "조선/방산",
+      "tomorrow_total_score": "0.6512918448224951",
+      "expected_return_grade": "상승 우위",
+      "signal_conflict_type": "상승신호-보수관찰",
+      "final_action": "관망",
+      "tomorrow_action": "관망"
+    },
+    {
+      "sector": "2차전지",
+      "tomorrow_total_score": "0.6257848567927433",
+      "expected_return_grade": "제한적 상승",
+      "signal_conflict_type": "상승신호-리스크충돌",
+      "final_action": "회피 우선",
+      "tomorrow_action": "회피 우선"
+    },
+    {
+      "sector": "화학/정유",
+      "tomorrow_total_score": "0.48740895939577683",
+      "expected_return_grade": "제한적 상승",
+      "signal_conflict_type": "상승신호-보수관찰",
+      "final_action": "관망",
+      "tomorrow_action": "관망"
+    },
+    {
+      "sector": "자동차",
+      "tomorrow_total_score": "0.4563661902489336",
+      "expected_return_grade": "제한적 상승",
+      "signal_conflict_type": "상승신호-강한리스크충돌",
+      "final_action": "회피 우선",
+      "tomorrow_action": "회피 우선"
+    }
+  ]
+}

@@ -1,0 +1,226 @@
+{
+  "snapshot_version": "prediction_snapshot_v1",
+  "snapshot_created_at": "2026-06-24T21:44:58",
+  "prediction_base_date": "2026-06-24",
+  "prediction_target_date": "2026-06-25",
+  "input_files": [
+    {
+      "role": "pykrx_sector_daily_features",
+      "path": "data/processed/pykrx_sector_daily_features.csv",
+      "exists": true,
+      "size_bytes": 875445,
+      "modified_at": "2026-06-24T21:30:41",
+      "sha256": "2c3820913b2ff29257da9092e4925b9e2f84c02d0b6f601f295f6dc7735959e6"
+    },
+    {
+      "role": "krx_official_stock_daily",
+      "path": "data/processed/krx_official_stock_daily.csv",
+      "exists": true,
+      "size_bytes": 14976818,
+      "modified_at": "2026-06-24T21:34:28",
+      "sha256": "2b36bbc06e7df716b1f94c022c92630945dfb6368855be449e9d0a56640af201"
+    },
+    {
+      "role": "naver_sector_investor_flow_features",
+      "path": "data/processed/naver_sector_investor_flow_features.csv",
+      "exists": true,
+      "size_bytes": 707931,
+      "modified_at": "2026-06-24T21:29:55",
+      "sha256": "8c4e2e970f172079ba7f573a9b3c0887ddf45809b45d23e091a1f8bca6ad795b"
+    },
+    {
+      "role": "dart_daily_disclosure_features",
+      "path": "data/processed/dart_daily_disclosure_features.csv",
+      "exists": true,
+      "size_bytes": 1017244,
+      "modified_at": "2026-06-24T21:32:42",
+      "sha256": "cd82900ae1f00833380932124162787c6e8f96b3d728c31118cb205e3af05f56"
+    },
+    {
+      "role": "kaggle_global_market_features",
+      "path": "data/processed/kaggle_global_market_features.csv",
+      "exists": true,
+      "size_bytes": 20552969,
+      "modified_at": "2026-06-24T21:35:44",
+      "sha256": "0e1cde149fbfadba99b4221e10e2bb788d97c58aed8b53fcf20537f2f45a1e84"
+    },
+    {
+      "role": "intraday_sector_features_latest",
+      "path": "data/processed/intraday_sector_features_latest.csv",
+      "exists": true,
+      "size_bytes": 3766,
+      "modified_at": "2026-06-24T21:35:01",
+      "sha256": "9304cbc929432bc3b0238d5232ef135f3867fbfd036ad7931bf2647b0c71fda5"
+    },
+    {
+      "role": "intraday_sector_features_history",
+      "path": "data/processed/intraday_sector_features_history.csv",
+      "exists": true,
+      "size_bytes": 28656,
+      "modified_at": "2026-06-24T21:35:01",
+      "sha256": "8bb07d586facc9706867bb85a130b9dd78d562c99b9b7c13ebb08f39cf6a7f59"
+    },
+    {
+      "role": "kis_sector_intraday_features",
+      "path": "data/processed/kis_sector_intraday_features.csv",
+      "exists": true,
+      "size_bytes": 3766,
+      "modified_at": "2026-06-24T21:35:01",
+      "sha256": "9304cbc929432bc3b0238d5232ef135f3867fbfd036ad7931bf2647b0c71fda5"
+    },
+    {
+      "role": "kis_sector_intraday_features_history",
+      "path": "data/processed/kis_sector_intraday_features_history.csv",
+      "exists": true,
+      "size_bytes": 829466,
+      "modified_at": "2026-06-24T21:35:01",
+      "sha256": "35f3de60519c9edca2f18d9498383cd3ca1f5d9e0383c6883389fef281b84a2e"
+    },
+    {
+      "role": "naver_sector_intraday_features",
+      "path": "data/processed/naver_sector_intraday_features.csv",
+      "exists": true,
+      "size_bytes": 4348,
+      "modified_at": "2026-06-24T16:51:00",
+      "sha256": "5b49ead4ad737196140956b7b039a4bdf822cc9033bb837c187dd23377bcab35"
+    },
+    {
+      "role": "naver_sector_intraday_features_history",
+      "path": "data/processed/naver_sector_intraday_features_history.csv",
+      "exists": true,
+      "size_bytes": 12142,
+      "modified_at": "2026-06-24T16:51:01",
+      "sha256": "dfd6566c13daba6382e63d388e9c0e11d33c9a531d346810c254ea42a2e618a8"
+    },
+    {
+      "role": "intraday_model_tracking",
+      "path": "data/processed/intraday_model_tracking.csv",
+      "exists": true,
+      "size_bytes": 1030932,
+      "modified_at": "2026-06-24T21:44:48",
+      "sha256": "2cbf03b405f5815d442a6f074bb786af07fe9be3f431155a7935566ae1b20546"
+    },
+    {
+      "role": "daily_stock_fx_flow_panel",
+      "path": "data/processed/daily_stock_fx_flow_panel.csv",
+      "exists": true,
+      "size_bytes": 16945145,
+      "modified_at": "2026-05-12T22:51:13",
+      "sha256": "39268d1dfacd45b727a8b41512b38ff0239fba5f6e34c8de401c8068dd479f2c"
+    },
+    {
+      "role": "historical_fomo_base",
+      "path": "data/processed/historical_fomo_base.csv",
+      "exists": true,
+      "size_bytes": 1060493,
+      "modified_at": "2026-05-12T22:51:09",
+      "sha256": "e653b54253720ae042ddda44121b8020a36de54222ed5073227e5a5bf7c00fd1"
+    },
+    {
+      "role": "latest_stock_snapshot",
+      "path": "data/processed/latest_stock_snapshot.csv",
+      "exists": true,
+      "size_bytes": 25909,
+      "modified_at": "2026-05-12T22:51:13",
+      "sha256": "f0f4da94843d11904bb4f1fd8731bc2d867285e300ecdd0e050d8ebc1b7a207f"
+    }
+  ],
+  "collection_reports": [
+    {
+      "role": "fx_collection_summary",
+      "path": "reports/fx_collection_summary.json",
+      "exists": true,
+      "size_bytes": 250,
+      "modified_at": "2026-06-24T21:28:00",
+      "sha256": "9ff7ab9f49374a3588b1780e0d1df36ff4174fa2ecab4141b6b6bf715af0642c"
+    },
+    {
+      "role": "naver_investor_flow_summary",
+      "path": "reports/naver_investor_flow_summary.json",
+      "exists": true,
+      "size_bytes": 419,
+      "modified_at": "2026-06-24T21:29:55",
+      "sha256": "9925dd0b72801b6782013419015767be81ca943194575ea5b915fa209eb84ef5"
+    },
+    {
+      "role": "kis_investor_flow_summary",
+      "path": "reports/kis_investor_flow_summary.json",
+      "exists": true,
+      "size_bytes": 419,
+      "modified_at": "2026-06-24T21:29:55",
+      "sha256": "9925dd0b72801b6782013419015767be81ca943194575ea5b915fa209eb84ef5"
+    },
+    {
+      "role": "intraday_collection_summary",
+      "path": "reports/intraday_collection_summary.json",
+      "exists": true,
+      "size_bytes": 789,
+      "modified_at": "2026-06-24T21:35:01",
+      "sha256": "27bd2db8f6526280d0bc03a09bf61dc2dbd320c885f787e33e4844b9ae77e6e3"
+    },
+    {
+      "role": "kis_intraday_collection_summary",
+      "path": "reports/kis_intraday_collection_summary.json",
+      "exists": true,
+      "size_bytes": 789,
+      "modified_at": "2026-06-24T21:35:01",
+      "sha256": "27bd2db8f6526280d0bc03a09bf61dc2dbd320c885f787e33e4844b9ae77e6e3"
+    },
+    {
+      "role": "naver_realtime_collection_summary",
+      "path": "reports/naver_realtime_collection_summary.json",
+      "exists": true,
+      "size_bytes": 815,
+      "modified_at": "2026-06-24T16:51:01",
+      "sha256": "aabbc152672a8e6155396e382048ee74cd0a22ddad0e4f17149e611f5e46829c"
+    },
+    {
+      "role": "pykrx_collection_summary",
+      "path": "reports/pykrx_collection_summary.json",
+      "exists": true,
+      "size_bytes": 174,
+      "modified_at": "2026-06-24T21:30:41",
+      "sha256": "0cac0cb525f611cb0797e1f95407aa43c0ca37deaf9c9305af9c528b41a52ff2"
+    },
+    {
+      "role": "krx_collection_summary",
+      "path": "reports/krx_collection_summary.json",
+      "exists": true,
+      "size_bytes": 939,
+      "modified_at": "2026-06-24T21:34:28",
+      "sha256": "add9da891e8a5867d9a8b705b77334f0a29b1aa1a15ecc9a84e49954d978c016"
+    },
+    {
+      "role": "dart_collection_summary",
+      "path": "reports/dart_collection_summary.json",
+      "exists": true,
+      "size_bytes": 234,
+      "modified_at": "2026-06-24T21:32:42",
+      "sha256": "f638d15d3cca4774cb487fa0eaf248e2497046137bb1ba4b7e97bf9e3e7096ea"
+    },
+    {
+      "role": "kaggle_global_market_summary",
+      "path": "reports/kaggle_global_market_summary.json",
+      "exists": true,
+      "size_bytes": 942,
+      "modified_at": "2026-06-24T21:35:44",
+      "sha256": "a617f9bdb9d2deb2bfeef13b530267940ff12275b3fd4d5e6df3ecf7eac91dc7"
+    },
+    {
+      "role": "intraday_learning_state_summary",
+      "path": "reports/intraday_learning_state_summary.json",
+      "exists": true,
+      "size_bytes": 473,
+      "modified_at": "2026-06-24T21:44:48",
+      "sha256": "5f109a38188ef5353718076e91daad8338ca2239c70ffc55f9cd7e6241791a0f"
+    },
+    {
+      "role": "intraday_rebound_signals_summary",
+      "path": "reports/intraday_rebound_signals_summary.json",
+      "exists": true,
+      "size_bytes": 332,
+      "modified_at": "2026-06-24T21:44:49",
+      "sha256": "c7a19f4590cf8cee82968b079bdcc7c073e4a4ed503e9fe513b454caa51e29c3"
+    }
+  ]
+}

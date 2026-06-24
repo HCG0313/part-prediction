@@ -1,0 +1,21 @@
+{
+  "snapshot_version": "prediction_snapshot_v1",
+  "snapshot_created_at": "2026-06-24T21:44:59",
+  "snapshot_path": "reports/prediction_snapshots/2026-06-25",
+  "prediction_base_date": "2026-06-24",
+  "prediction_target_date": "2026-06-25",
+  "copied_files": [
+    {
+      "source": "reports/tomorrow_sector_prediction.csv",
+      "snapshot": "reports/prediction_snapshots/2026-06-25/prediction.csv",
+      "copied": true,
+      "sha256": "6a0803a96ef7ee459a7af7b55099d95233f7c2cac65651ffe0d6d201f3776cfc"
+    },
+    {
+      "source": "reports/tomorrow_sector_prediction_summary.json",
+      "snapshot": "reports/prediction_snapshots/2026-06-25/summary.json",
+      "copied": true,
+      "sha256": "14bd8a3539b536a8a567e5ff4c3609df25681f621feba69223e0361c53c1e16f"
+    }
+  ]
+}

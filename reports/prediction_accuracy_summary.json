@@ -1,67 +1,66 @@
 {
   "status": "ok",
-  "evaluated_predictions": 348,
+  "evaluated_predictions": 360,
   "date_min": "2026-05-12",
-  "date_max": "2026-06-23",
-  "direction_accuracy_all": 0.4339080459770115,
-  "absolute_positive_rate_all": 0.3649425287356322,
-  "relative_excess_positive_rate_all": 0.45689655172413796,
-  "score_top1_actual_top3_rate": 0.2413793103448276,
-  "score_top3_actual_top3_overlap_rate": 0.2988505747126437,
-  "avg_score_top3_minus_bottom3_spread": -0.017583770503210847,
+  "date_max": "2026-06-24",
+  "direction_accuracy_all": 0.44722222222222224,
+  "absolute_positive_rate_all": 0.38055555555555554,
+  "relative_excess_positive_rate_all": 0.45,
+  "score_top1_actual_top3_rate": 0.23333333333333334,
+  "score_top3_actual_top3_overlap_rate": 0.3,
+  "avg_score_top3_minus_bottom3_spread": -0.005552158153427485,
   "recent_window_warning_count": 2,
   "recent_window_warnings": [
     "top3_spread_negative",
     "top3_absolute_and_relative_weak"
   ],
-  "rank_ic_spearman_avg": 0.010920498368338366,
-  "ndcg_at_3_avg": 0.5692654800223672,
-  "ranking_quality_warning_count": 3,
+  "rank_ic_spearman_avg": 0.018714989914568582,
+  "ndcg_at_3_avg": 0.577506968260786,
+  "ranking_quality_warning_count": 2,
   "ranking_quality_warnings": [
     "recent_rank_ic_negative",
-    "top3_overlap_below_30pct",
     "recent_top3_bottom3_spread_negative"
   ],
-  "policy_live_rows": 48,
+  "policy_live_rows": 60,
   "policy_live_policy_versions": 2,
   "policy_live_latest_version": "decision_layer_v9_ranking_quality_soft_gate",
-  "return_interval_coverage_rate_all": 0.4166666666666667,
-  "return_interval_last5_coverage_rate": 0.4166666666666667,
-  "return_interval_avg_width_pct": 7.551786589894683,
-  "return_interval_avg_center_abs_error_pct": 5.385509063772879,
+  "return_interval_coverage_rate_all": 0.5555555555555556,
+  "return_interval_last5_coverage_rate": 0.5555555555555556,
+  "return_interval_avg_width_pct": 7.288971046802086,
+  "return_interval_avg_center_abs_error_pct": 4.259284689832299,
   "core_or_aux_count": 67,
   "core_or_aux_positive_rate": 0.40298507462686567,
   "latest_top_actuals": [
     {
-      "prediction_target_date": "2026-06-23",
-      "sector": "유통/소비",
-      "actual_sector_return": -2.16794476485639,
-      "tomorrow_action": "회피 우선"
-    },
-    {
-      "prediction_target_date": "2026-06-23",
+      "prediction_target_date": "2026-06-24",
       "sector": "바이오",
-      "actual_sector_return": -3.301629845280124,
+      "actual_sector_return": 5.957266468606259,
       "tomorrow_action": "회피 우선"
     },
     {
-      "prediction_target_date": "2026-06-23",
-      "sector": "금융",
-      "actual_sector_return": -3.374268468427697,
+      "prediction_target_date": "2026-06-24",
+      "sector": "화학/정유",
+      "actual_sector_return": 1.7693958983997289,
       "tomorrow_action": "회피 우선"
     },
     {
-      "prediction_target_date": "2026-06-23",
-      "sector": "게임/엔터",
-      "actual_sector_return": -5.263865555611476,
+      "prediction_target_date": "2026-06-24",
+      "sector": "2차전지",
+      "actual_sector_return": 1.376672160193346,
       "tomorrow_action": "회피 우선"
     },
     {
-      "prediction_target_date": "2026-06-23",
+      "prediction_target_date": "2026-06-24",
+      "sector": "조선/방산",
+      "actual_sector_return": 0.6128118728440927,
+      "tomorrow_action": "회피 우선"
+    },
+    {
+      "prediction_target_date": "2026-06-24",
       "sector": "철강/소재",
-      "actual_sector_return": -5.75207652245714,
+      "actual_sector_return": 0.4654979091130264,
       "tomorrow_action": "회피 우선"
     }
   ],
-  "evaluated_at": "2026-06-23T20:33:51"
+  "evaluated_at": "2026-06-24T21:45:00"
 }
