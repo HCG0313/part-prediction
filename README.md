@@ -21,7 +21,7 @@
 
 2026-07-08 장마감 후 일간 파이프라인을 실행해 환율, 뉴스, 수급, pykrx, DART, KIS 장마감 스냅샷, 모델 학습, 예측 검증을 갱신했습니다. KIS 수급 overlay와 KIS 마감 스냅샷은 240개 종목 모두 성공했고, pykrx도 2026-07-08까지 갱신되었습니다. KRX 공식 API는 일부 항목만 수집되어 `partial`로 분리 기록합니다.
 
-오늘 발견된 주요 오류는 실행 환경 문제였습니다. 번들 Python에는 `sklearn`, `scipy`, `requests`, `tabulate`, `pykrx`가 없어 학습과 평가 일부가 실패했기 때문에, `run_daily_collection.ps1`이 학습 패키지가 설치된 로컬 Python을 먼저 선택하도록 수정했습니다. 수정 후 수익률 모델, 랭킹 모델 V3~V5, FOMO 가중치, 예측, 정확도 평가를 다시 실행해 성공을 확인했습니다.
+오늘 해결한 실행 환경 문제는 GitHub Issues에 별도 기록했습니다. README에는 프로젝트 현황과 모델 구조를 요약하고, 문제 해결 과정은 [Issues #22](https://github.com/HCG0313/part-prediction/issues/22)처럼 기간별 해결 기록으로 관리합니다.
 
 ## 프로젝트 목표
 
@@ -136,7 +136,8 @@ flowchart LR
 | 문서 | 설명 |
 | --- | --- |
 | [일일 예측 일기](docs/daily-prediction-diary.md) | 날짜별 시장 결과, 예측 비교, 다음 예측 기록 |
-| [문제 해결 로그](docs/problem-solving-log.md) | 오류, 원인, 해결 방법, 검증 결과 |
+| [GitHub Issues](https://github.com/HCG0313/part-prediction/issues) | 오류, 원인, 해결 방법, 검증 결과를 기간별 이슈로 기록 |
+| [문제 해결 로그](docs/problem-solving-log.md) | Issues 기록을 보조하는 로컬 요약 문서 |
 | [모델 개발 로그](docs/model-development-log-beta.md) | 모델 구조와 업그레이드 과정 |
 | [검증 결과](docs/results.md) | 최신 성능 지표와 포트폴리오 관점의 해석 |
 | [포트폴리오 이슈 계획](docs/github-portfolio-issue-plan.md) | GitHub 포트폴리오 정리 방향 |
