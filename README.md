@@ -119,6 +119,7 @@ flowchart LR
 | 증거 | 링크 | 면접에서 보여주는 내용 |
 | --- | --- | --- |
 | 문제 해결 기록 | [GitHub Issues](https://github.com/HCG0313/part-prediction/issues) | 문제 정의, 원인 분석, 해결 방법, 검증 결과 |
+| 2026-07-09 해결 사례 | [Issues #23](https://github.com/HCG0313/part-prediction/issues/23) | 후보 신뢰도 피드백, 베타 라우터/딥러닝 shadow 비교, 메인 교체 보류 판단 |
 | 2026-07-08 해결 사례 | [Issues #22](https://github.com/HCG0313/part-prediction/issues/22) | Python 실행 환경 오류와 KIS/pykrx 검증 |
 | 일일 예측 일기 | [docs/daily-prediction-diary.md](docs/daily-prediction-diary.md) | 예측과 실제 결과 비교 |
 | 모델 개발 로그 | [docs/model-development-log-beta.md](docs/model-development-log-beta.md) | 모델 구조 변경과 개선 과정 |
