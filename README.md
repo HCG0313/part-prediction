@@ -15,6 +15,24 @@
 | 결과를 어떻게 검증했나 | 방향 적중률, Top3 겹침률, RankIC, NDCG@3, 예상 수익률 구간 커버율로 검증했습니다. |
 | 문제 해결 과정은 어디에 있나 | 오류와 개선 과정은 [GitHub Issues](https://github.com/HCG0313/part-prediction/issues)에 기간별로 기록했습니다. |
 
+## 2026-09-11 모델 정리와 방향 전환
+
+교수님 피드백을 반영해, 지금까지 별도로 만든 복합 예측 모델과 실험 결과를 최종 정리했습니다.
+
+기존 모델은 가격, 수급, 뉴스, FOMO, 장중 흐름, 리스크 게이트, Shadow 모델을 결합한 실험형 섹터 로테이션 시스템이었습니다. 데이터 수집부터 예측, 검증, 문제 해결 기록까지 직접 구축했다는 점은 포트폴리오 성과이지만, 변수와 보조 모델이 많아지면서 방향 예측의 해석 가능성과 안정성이 낮아지는 한계도 확인했습니다.
+
+따라서 기존 결과는 실험 기록으로 보관하고, 이후 메인 예측 방식은 다음 기준으로 전환합니다.
+
+| 구분 | 기존 방식 | 전환 후 방향 |
+| --- | --- | --- |
+| 모델 구조 | 다층 복합 예측 시스템 | 모멘텀 중심 상승/하락 예측 모델 |
+| 입력 변수 | 가격, 수급, 뉴스, FOMO, 장중 흐름, 게이트 | 예측 시점에 확정된 가격·거래량·모멘텀 변수 중심 |
+| 검증 기준 | 방향, Top3, RankIC, 수익률 구간을 복합 평가 | 50% 기준선, 55~60% 의미 있는 방향 예측률 중심 |
+| FOMO/뉴스 | 예측 보정층 | 보조 해석 지표 |
+| 리스크 게이트 | 최종 행동 차단 장치 | 예측과 분리된 위험 해석층 |
+
+자세한 정리는 [기존 예측 모델 최종 정리](docs/final-legacy-model-summary.md)에 작성했습니다.
+
 ## 내 역할
 
 | 역할 | 수행 내용 |
@@ -119,6 +137,7 @@ flowchart LR
 | 증거 | 링크 | 면접에서 보여주는 내용 |
 | --- | --- | --- |
 | 문제 해결 기록 | [GitHub Issues](https://github.com/HCG0313/part-prediction/issues) | 문제 정의, 원인 분석, 해결 방법, 검증 결과 |
+| 기존 모델 최종 정리 | [docs/final-legacy-model-summary.md](docs/final-legacy-model-summary.md) | 지금까지 만든 모델과 결과, 한계, 새 예측 방식으로의 전환 근거 |
 | 2026-07-09 해결 사례 | [Issues #23](https://github.com/HCG0313/part-prediction/issues/23) | 후보 신뢰도 피드백, 베타 라우터/딥러닝 shadow 비교, 메인 교체 보류 판단 |
 | 2026-07-08 해결 사례 | [Issues #22](https://github.com/HCG0313/part-prediction/issues/22) | Python 실행 환경 오류와 KIS/pykrx 검증 |
 | 일일 예측 일기 | [docs/daily-prediction-diary.md](docs/daily-prediction-diary.md) | 예측과 실제 결과 비교 |
